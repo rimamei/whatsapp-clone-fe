@@ -27,6 +27,7 @@ const MessageContainer = ({ className }: MessageContainerProps) => {
         .fill('')
         .map((item, index) => (
           <ChatMessage
+            key={index}
             user={1}
             message={`test test`}
             className={index === 0 ? 'mt-4' : ''}
@@ -42,6 +43,6 @@ const MessageContainer = ({ className }: MessageContainerProps) => {
       <div ref={scrollMessage} />
     </div>
   );
-}
+};
 
 export default MessageContainer;

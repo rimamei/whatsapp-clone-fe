@@ -24,20 +24,30 @@ const SidebarList = () => {
       user: 'Resh',
     },
   ];
-  
+
   return (
-    <div className='mx-4'>
+    <div className="mx-4">
       <Status user="My Status" updated="No latest Status" image={''} />;
       <div className="border-b border-gray-400" />
       <div className="relative overflow-hidden pt-4">
         <p className="text-sm text-gray-300">LATEST</p>
-        {data.map((v) => (
-          <Status updated={v.updated} image={v.image} user={v.user} />
+        {data.map((v, index) => (
+          <Status
+            key={index}
+            updated={v.updated}
+            image={v.image}
+            user={v.user}
+          />
         ))}
         <div className="border-b border-gray-400" />
         <p className="text-sm text-gray-300 py-4">VIEWED</p>
-        {data.map((v) => (
-          <Status updated={v.updated} image={v.image} user={v.user} />
+        {data.map((v, index) => (
+          <Status
+            key={index}
+            updated={v.updated}
+            image={v.image}
+            user={v.user}
+          />
         ))}
       </div>
     </div>
