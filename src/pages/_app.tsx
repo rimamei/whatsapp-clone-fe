@@ -2,9 +2,11 @@ import '@styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { Provider } from 'react-redux';
-import { store } from '@store';
 import { NextPage } from 'next';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { DefaultLayout } from '@layout';
+import { store } from '@store';
 
 type NextPageWithLayout = NextPage & {
   Layout?: React.FunctionComponent;
@@ -25,6 +27,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Provider store={store}>
+        <ToastContainer />
         <LayoutCustom>
           <Component {...pageProps} />
         </LayoutCustom>

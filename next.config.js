@@ -7,6 +7,13 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+
+module.exports = {
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+};
+
 module.exports = withImages({
   webpack(config, options) {
     return config;

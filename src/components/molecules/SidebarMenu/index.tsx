@@ -1,6 +1,6 @@
+import { ellipsis } from '@utils';
 import React from 'react';
 import * as Fa from 'react-icons/fa';
-import { ellipsis } from 'utils/ellipsis';
 
 const SidebarMenu = () => {
   return (
